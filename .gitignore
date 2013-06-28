@@ -1,5 +1,5 @@
 *.log
 *.pot
 *.pyc
-bookLists/bookLists/settings.py
+settings.py
 *db
