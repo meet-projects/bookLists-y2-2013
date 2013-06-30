@@ -10,7 +10,7 @@ urlpatterns = patterns('',
         url(r'^$', views.home, name='home'),
 
         url(r'^categories/(?P<genre>\w+)/$',
-            views.get_Books)
+            views.get_Books),
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
 
