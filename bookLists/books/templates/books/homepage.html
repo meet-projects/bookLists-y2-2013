@@ -6,38 +6,42 @@ href="{{ STATIC_URL }}css/homePage.css">
 </head>
 
 <body> 
+<hr>
  <div>
-	<span id ="login-over" style = "border: 1px solid black">
+	<span class = "up_links" id ="login-over">
 		Login
 	</span>
-	<span id ="books" style = "border: 1px solid black">
+		
+	<span class = "up_links" id ="books">
 		Books
 	</span>
-	<span id ="market" style = "border: 1px solid black">
+	<span class = "up_links" id ="market">
    		Market
 	</span>
-	<span id ='search' style = "border: 1px solid black; margin: 10">
-		Search:<input type="search">
+	<span class = "up_links" id ="search">
+		<form>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"> 			</form>
 	</span>
 </div>	
+	<table id = "login">
+		<tr><td>Email:</td>   <td><input type = "text" name = "email"></td> </tr>
+		<tr><td>Password: </td>    <td><input type = "password" name = "password"></td></tr>
+		<tr><td><a href = "signUp.html" name = "sign up">Sign Up </a></td></tr>
+		</table>
+		
 	
-<div id = 'login' style = "border: 1px soild black">
-	Email:    <input type = "text" name = "email"> <br>
-	Password: <input type = "password" name = "password"><br>
-	<a href = "signUp.html" name = "sign up">Sign Up </a>
-</div>
+
 <br>
 <div id = "books" style = "border: 1px soild black">
-	<a href = "categories/latest.html" name = "latest">Latest </a><br>
-	<a href = "categories/mostRead.html" name = "most read">Most Read </a><br>
-	<a href = "categories/sciFi.html" name = "sci-fi">Sci Fi </a><br>
-	<a href = "categories/kids.html" name = "kids">Kids </a><br>
-	<a href = "categories/romance.html" name = "romance">Romance </a><br>
-	<a href = "categories/horror.html" name = "horror">Horror </a><br>
-	<a href = "categories/comics.html" name = "comics">Comics </a><br>
-	<a href = "categories/biography.html" name = "biography">Biography </a><br>
-	<a href = "categories/fantasy.html" name = "fantasy">Fantasy </a><br>
-	<a href = "categories/history.html" name = "history">History </a>
+	<a href = "categories/latest" name = "latest">Latest </a><br>
+	<a href = "categories/mostRead" name = "most read">Most Read </a><br>
+	<a href = "categories/sciFi" name = "sci-fi">Sci Fi </a><br>
+	<a href = "categories/kids" name = "kids">Kids </a><br>
+	<a href = "categories/romance" name = "romance">Romance </a><br>
+	<a href = "categories/horror" name = "horror">Horror </a><br>
+	<a href = "categories/comics" name = "comics">Comics </a><br>
+	<a href = "categories/biography" name = "biography">Biography </a><br>
+	<a href = "categories/fantasy" name = "fantasy">Fantasy </a><br>
+	<a href = "categories/history" name = "history">History </a>
 </div>
 
 </body>

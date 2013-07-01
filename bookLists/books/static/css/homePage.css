@@ -1,4 +1,39 @@
 body  {
     background-image: url('../images/books3.jpg');
-    background-repeat:no-repeat
+    background-repeat:no-repeat;
+	height: 100%;
+	width: 100%;
 }
+
+.up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;
+padding-left:50px; margin-top: 10px;
+
+}
+
+
+
+#search{
+	float:right; 
+	color:484848; 
+	margin-right: 10px;
+	margin-top: 0;   
+
+}
+
+#login-over{color:003366; margin-left: 20px;
+
+}
+
+#market{color:CC3300; margin-left: 80px;
+
+}
+
+#books{color:green; margin-left: 80px;
+
+}
+
+#login{visibility:visible;
+
+}
+
+
