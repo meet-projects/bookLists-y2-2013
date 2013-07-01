@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
         url(r'^categories/(?P<genre>\w+)/$',
             views.get_Books),
+        
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
 

@@ -2,41 +2,43 @@
 <head>
 <link rel="stylesheet" type= "text/css"
 href="{{ STATIC_URL }}css/homePage.css">
-	
+<img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" /></a>
 </head>
+
 <body> 
  <div>
-	<span id ='login'>
-		<input type="button" value="login" >
-		
+	<span id ="login-over" style = "border: 1px solid black">
+		Login
 	</span>
 	<span id ="books" style = "border: 1px solid black">
-		books
-
-	</span>
-	<span id ="categories" style = "border: 1px solid black">
-		categories
-
-	</span>
-	<span id ="profile" style = "border: 1px solid black">
-		profile
-		
-	</span>
+		Books
 	</span>
 	<span id ="market" style = "border: 1px solid black">
-		market
-		
+   		Market
 	</span>
 	<span id ='search' style = "border: 1px solid black; margin: 10">
-		search:<input type="search">
+		Search:<input type="search">
 	</span>
 </div>	
-
-
-
-
-
-
+	
+<div id = 'login' style = "border: 1px soild black">
+	Email:    <input type = "text" name = "email"> <br>
+	Password: <input type = "password" name = "password"><br>
+	<a href = "signUp.html" name = "sign up">Sign Up </a>
+</div>
+<br>
+<div id = "books" style = "border: 1px soild black">
+	<a href = "categories/latest.html" name = "latest">Latest </a><br>
+	<a href = "categories/mostRead.html" name = "most read">Most Read </a><br>
+	<a href = "categories/sciFi.html" name = "sci-fi">Sci Fi </a><br>
+	<a href = "categories/kids.html" name = "kids">Kids </a><br>
+	<a href = "categories/romance.html" name = "romance">Romance </a><br>
+	<a href = "categories/horror.html" name = "horror">Horror </a><br>
+	<a href = "categories/comics.html" name = "comics">Comics </a><br>
+	<a href = "categories/biography.html" name = "biography">Biography </a><br>
+	<a href = "categories/fantasy.html" name = "fantasy">Fantasy </a><br>
+	<a href = "categories/history.html" name = "history">History </a>
+</div>
 
 </body>
 </html>

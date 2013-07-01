@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-        return HttpResponse("Congratz")
+        return render(request, "books/homepage.html", {})
 
 def get_Books(request,genre):
 
