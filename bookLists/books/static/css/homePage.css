@@ -28,12 +28,15 @@ padding-left:50px; margin-top: 10px;
 
 }
 
-#books{color:green; margin-left: 80px;
+#books{color:33CC00; margin-left: 80px;
 
 }
 
 #login{visibility:visible; border: solid #707070 4px; margin: 5px; color: 0099CC; font-weight: bold}
 
 }
+
+
+#cateTable{ visibility:visible; }
 
 
