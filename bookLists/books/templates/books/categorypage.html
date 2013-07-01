@@ -12,17 +12,26 @@
 href="{{ STATIC_URL }}css/categorypage.css">
 
 </head>
-
 <body>
-
-<div id="category" class="Title">
-
-</div>
-
-
-
+  {% if genre %}
+    <div id="category" class="Title">
+      {{ genre }}  
+    </div>
+  {% else %}
+    <p>There aren't any genres </p>
+  {% endif %}
+  {% if books %}
+    <div>
+      {% for book in books %}
+        <div id="books" class="Books">
+	  {{book.name}}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p> No books <p>
+  {% endif %}
 </body>
-
 </html>
 
 

@@ -8,7 +8,6 @@ from books import views
 urlpatterns = patterns('',
     # Examples:
         url(r'^$', views.home, name='home'),
-
         url(r'^categories/(?P<genre>\w+)/$',
             views.get_Books),
         
