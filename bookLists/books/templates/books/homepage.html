@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" type= "text/css"
 href="{{ STATIC_URL }}css/homePage.css">
+<script src="homepage.js"></script> 
 <img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" /></a>
 </head>
 
@@ -24,8 +25,9 @@ href="{{ STATIC_URL }}css/homePage.css">
 </div>	
 	<table id = "login">
 		<tr><td>Email:</td>   <td><input type = "text" name = "email"></td> </tr>
-		<tr><td>Password: </td>    <td><input type = "password" name = "password"></td></tr>
-		<tr><td><a href = "signUp.html" name = "sign up">Sign Up </a></td></tr>
+		<tr><td >Password: </td>    <td><input type = "password" name = "password"></td></tr>
+		<tr><td><form><input type = "submit" value = "login" name = "login" style = "border-radius: 27px"></form> </td>
+			<td><a href = "signUp.html" name = "sign up">Sign Up </a></td></tr>
 		</table>
 		
 	
