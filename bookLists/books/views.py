@@ -12,6 +12,8 @@ def get_Books(request,genre):
 
         books = Book.objects.filter(genre = genre)
 
+        Genre = genre
+
         return HttpResponse("Genre Page")
 
         

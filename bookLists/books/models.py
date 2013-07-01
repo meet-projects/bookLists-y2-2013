@@ -8,6 +8,10 @@ class Genre(models.Model):
 
         name = models.CharField(max_length = 20)
 
+        def __unicode__(self):
+
+                return self.name
+
         ##bgImage = models.ImageField(
 
         
@@ -23,5 +27,9 @@ class Book(models.Model):
 
         year = models.CharField(max_length = 4)
 
+        def __unicode__(self):
+
+                return self.name
+        
         ## image
 
