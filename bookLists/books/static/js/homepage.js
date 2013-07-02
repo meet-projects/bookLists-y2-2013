@@ -6,5 +6,13 @@ $(document).ready(function() {
 	}, function() { 
 		$('#login').hover(function() { $(this).show(); }, function() { $(this).hide(); });
 	});
+
+	$('#books').hover(function () {
+		$('#cateTable').show();
+	}, function() { 
+		$('#cateTable').hover(function() { $(this).show(); }, function() { $(this).hide(); });
+	});
+
+
 });
 

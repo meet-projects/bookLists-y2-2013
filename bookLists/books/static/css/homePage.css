@@ -47,9 +47,14 @@ padding-left:50px; margin-top: 10px;
 }
 
 
-#cateTable { 
-	/*display: none; */
-/*style = "margin-left: 25%; margin-top: -10%"*/
+#cateTable {
+	
+	border: solid #707070 4px; 
+	display: none; 
+	margin-top: -10%";
+	position:absolute;
+	margin-left:300px;
+	
 }
 
 
