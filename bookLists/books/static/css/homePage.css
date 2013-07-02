@@ -10,7 +10,10 @@ padding-left:50px; margin-top: 10px;
 
 }
 
-
+.uplink_container {
+	float: left;
+	width: 200px;
+}
 
 #search{
 	float:right; 
@@ -20,23 +23,33 @@ padding-left:50px; margin-top: 10px;
 
 }
 
-#login-over{color:003366; margin-left: 20px;
+#login-over{
+	color:#003366; 
+	margin-left: 20px;
+}
+
+#market{
+	color:#CC3300; 
+	margin-left: 80px;
+}
+
+#books{color:#33CC00; margin-left: 80px;
 
 }
 
-#market{color:CC3300; margin-left: 80px;
-
-}
-
-#books{color:33CC00; margin-left: 80px;
-
-}
-
-#login{visibility:visible; border: solid #707070 4px; margin: 5px; color: 0099CC; font-weight: bold}
-
+#login {
+	display: none; 
+	border: solid #707070 4px; 
+	margin: 5px; 
+	color: #0099CC; 
+	font-weight: bold
+	width: 100px;
 }
 
 
-#cateTable{ visibility:visible; }
+#cateTable { 
+	/*display: none; */
+/*style = "margin-left: 25%; margin-top: -10%"*/
+}
 
 

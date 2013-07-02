@@ -9,10 +9,23 @@ href="{{ STATIC_URL }}css/homePage.css">
 
 <body link = "green"> 
 <hr>
- <div>
+<div>
+	<div id="login_container" class="uplink_container">
 	<span class = "up_links" id ="login-over">
 		Login
 	</span>
+	<table id = "login">
+		<tr><td>Email:</td>   
+			<td><input type = "text" name = "email"></td>
+		</tr>
+		<tr><td >Password: </td>    
+			<td><input type = "password" name = "password"></td>
+		</tr>
+		<tr><td><form><input type = "submit" value = "login" name = "login" style = "border-radius: 27px"></form></td>
+			<td><a href = "signUp.html" name = "sign up">Sign Up </a></td>
+		</tr>
+	</table>
+	</div>
 		
 	<span class = "up_links" id ="books">
 		Books
@@ -24,19 +37,23 @@ href="{{ STATIC_URL }}css/homePage.css">
 		<form>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"> 			</form>
 	</span>
 </div>	
-<table id = "login">
-	<tr><td>Email:</td>   <td><input type = "text" name = "email"></td> </tr>
-	<tr><td >Password: </td>    <td><input type = "password" name = "password"></td></tr>
-	<tr><td><form><input type = "submit" value = "login" name = "login" style = "border-radius: 27px"></form> </td>
-		<td><a href = "signUp.html" name = "sign up">Sign Up </a></td></tr>
-</table>
 <br>
-<table id = "cateTable" style = "margin-left: 25%; margin-top: -10%">
-	<tr><td><a class = "categories" href = "categories/latest" name = "latest">Latest </a></td><td><a class = "categories" href = "categories/mostRead" name = "most read">Most Read </a></td></tr>
-	<tr><td><a class = "categories" href = "categories/sciFi" name = "sci-fi">Sci-Fi </a></td><td><a class = "categories" href = "categories/kids" name = "kids">Kids </a></td></tr>
-	<tr><td><a class = "categories" href = "categories/romance" name = "romance">Romance </a></td><td><a class = "categories" href = "categories/horror" name = "horror">Horror </a></td></tr>
-	<tr><td><a class = "categories" href = "categories/comics" name = "comics">Comics </a></td><td><a class = "categories" href = "categories/biography" name = "biography">Biography </a></td></tr>
-	<tr><td><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></td><td><a class = "categories" href = "categories/history" name = "history">History </a></td></tr>
+<table id = "cateTable">
+	<tr><td><a class = "categories" href = "categories/latest" name = "latest">Latest </a></td>
+		<td><a class = "categories" href = "categories/mostRead" name = "most read">Most Read </a></td>
+	</tr>
+	<tr><td><a class = "categories" href = "categories/sciFi" name = "sci-fi">Sci-Fi </a></td>
+		<td><a class = "categories" href = "categories/kids" name = "kids">Kids </a></td>
+	</tr>
+	<tr><td><a class = "categories" href = "categories/romance" name = "romance">Romance </a></td>
+		<td><a class = "categories" href = "categories/horror" name = "horror">Horror </a></td>
+	</tr>
+	<tr><td><a class = "categories" href = "categories/comics" name = "comics">Comics </a></td>
+		<td><a class = "categories" href = "categories/biography" name = "biography">Biography </a></td>
+	</tr>
+	<tr><td><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></td>
+		<td><a class = "categories" href = "categories/history" name = "history">History </a></td>
+	</tr>
 </table>
 
 </body>

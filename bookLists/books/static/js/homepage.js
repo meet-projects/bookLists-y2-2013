@@ -1,10 +1,10 @@
 $(document).ready(function() {
 // Handler for .ready() called.
 
-$('#login-over').handlerIn(function () {
-	//$("#login").show()});
-	alert("hello!");
+	$('#login-over').hover(function () {
+		$('#login').show();
+	}, function() { 
+		$('#login').hover(function() { $(this).show(); }, function() { $(this).hide(); });
+	});
 });
-$('#login-over').handlerOut(function () {
-	$("#login").hide()});
-});
+
