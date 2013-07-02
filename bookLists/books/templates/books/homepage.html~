@@ -45,7 +45,7 @@ href="{{ STATIC_URL }}css/homePage.css">
 	<tr><td><a class = "categories" href = "categories/Scifi" name = "sci-fi">Sci-Fi </a></td>
 		<td><a class = "categories" href = "categories/Kids" name = "kids">Kids </a></td>
 	</tr>
-	<tr><td><a class = "categories" href = "categories/Romance" name = "romance">Romance </a></td>
+	<tr><td><a class = "categories" href = "categories/Romance" name = "Romance">Romance </a></td>
 		<td><a class = "categories" href = "categories/Horror" name = "horror">Horror </a></td>
 	</tr>
 	<tr><td><a class = "categories" href = "categories/Comics" name = "comics">Comics </a></td>

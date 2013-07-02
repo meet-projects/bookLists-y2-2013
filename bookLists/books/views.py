@@ -9,10 +9,10 @@ def home(request):
         return render(request, "books/homepage.html", {})
 
 def get_Books(request,genre):
-        genre = Genre.objects.filter(name=str(genre))
-        books = Book.objects.filter(genre=genre[0])
+        fitGenre = Genre.objects.filter(name=str(genre))
+        books = Book.objects.filter(genre=fitGenre)
         return render(request, "books/categorypage.html",
-                      {'books': books, 'genre': genre[0]})
+                      {'books': books, 'genre': fitGenre[0]})
 
         
         
