@@ -19,7 +19,9 @@ def get_genre(request,genre):
                       {'books': books, 'genre': fitGenre[0]})
 
 def get_book(request, book):
-        fitBook = Book.objects.filter(name =str(book))
+        print book
+        fitBook = Book.objects.filter(name =book)[0]
+        print fitBook
         context = {'book':fitBook}
         
 	return render(request, "books/bookpage.html", context)
@@ -36,16 +38,6 @@ def submitlogin(request):
     Email = request.POST['email']
     Password = request.POST['password']
     user = authenticate(username=Email, password=Password)
+    login(request, user)
     context = {'user': request.user}
-    if user is not None:
-        print "Cleared for takeoff"
-    else:
-
-        print "Invalid log in attempt"
-            
-
-    
-    return render(request, 'books/homepage.html', context)
-        
-
-        
+    return render(request, 'books/homepage.html', context)        

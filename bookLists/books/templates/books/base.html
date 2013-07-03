@@ -7,31 +7,49 @@ href="{{ STATIC_URL }}css/base.css">
 
 <title>  {% block title %} {% endblock %}</title>
 
-<img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
+
 </head>
 
 <body link = "green" alink = "green" vlink = "green"> 
 
+<img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
+
+{% if user.is_authenticated %}
+TEST {{ user.username }} ME
+{% else %}
+NO USER asdbas;ld
+{% endif %}
+
 
 <hr>
+
+{% if user.is_authenticated %}
+<div>
+	<span class = "up_links" id ="profile">
+		Profile
+	</span>
+{% else %}
 <div>
 	<div id="login_container" class="uplink_container">
 	<span class = "up_links" id ="login-over">
 		Login
 	</span>
 	<table id = "login">
+	<form action = "/submitlogin" method = "post">
+		{% csrf_token %}
 		<tr><td>Email:</td>   
 			<td><input type = "text" name = "email"></td>
 		</tr>
 		<tr><td >Password: </td>    
 			<td><input type = "password" name = "password"></td>
 		</tr>
-		<tr><td><form><input type = "submit" value = "login" name = "login" style = "border-radius: 27px"></form></td>
+		<tr><td><form><input type = "submit" value = "Login" style = "border-radius: 27px"></form></td>
+	</form>
 			<td><a href = "signup.html" name = "sign up">Sign Up </a></td>
 		</tr>
 	</table>
 	</div>
-		
+{% endif %}
 	<span class = "up_links" id ="books">
 		Books
 	</span>
@@ -41,7 +59,8 @@ href="{{ STATIC_URL }}css/base.css">
 	<span class = "up_links" id ="search">
 		<form>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"></form>
 	</span>
-</div>	
+</div>
+	
 <br>
 <table id = "cateTable">
 	<tr><td><a class = "categories" href = "categories/Latest" name = "latest">Latest </a></td>
@@ -60,7 +79,6 @@ href="{{ STATIC_URL }}css/base.css">
 		<td><a class = "categories" href = "categories/History" name = "history">History </a></td>
 	</tr>
 </table>
-
 
 
 {% block content %}
