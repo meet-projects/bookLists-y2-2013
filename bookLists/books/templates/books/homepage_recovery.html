@@ -1,17 +1,13 @@
 <html>
 <head>
 <link rel="stylesheet" type= "text/css"
-href="{{ STATIC_URL }}css/base.css">
+href="{{ STATIC_URL }}css/homePage.css">
 <script src="{{ STATIC_URL }}js/jquery-1.10.1.min.js"></script>
-<script src="{{ STATIC_URL }}js/base.js"></script> 
-
-<title>  {% block title %} {% endblock %}</title>
-
+<script src="{{ STATIC_URL }}js/homepage.js"></script> 
 <img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
 </head>
 
-<body link = "green" alink = "green" vlink = "green"> 
-
+<body link = "green"> 
 <hr>
 <div>
 	<div id="login_container" class="uplink_container">
@@ -59,13 +55,6 @@ href="{{ STATIC_URL }}css/base.css">
 		<td><a class = "categories" href = "categories/History" name = "history">History </a></td>
 	</tr>
 </table>
-
-
-{% block content %}
-
-   
-
-{% endblock %}
 
 </body>
 </html>
