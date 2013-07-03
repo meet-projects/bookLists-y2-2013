@@ -2,9 +2,9 @@
 
 from models import Book, Genre
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 
@@ -24,7 +24,10 @@ def get_book(request, book):
         
 	return render(request, "books/bookpage.html", context)
 
+def logout_user(request):
 
+ logout(request)
+ return HttpResponseRedirect("home")
 
 def market(request):
 	 return render(request, "books/market.html", {})
