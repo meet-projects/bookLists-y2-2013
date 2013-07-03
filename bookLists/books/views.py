@@ -12,14 +12,17 @@ from django.contrib.auth import authenticate, login
 def home(request):
         return render(request, "books/homepage.html", {'user':request.user})
 
-def get_Books(request,genre):
+def get_genre(request,genre):
         fitGenre = Genre.objects.filter(name=str(genre))
         books = Book.objects.filter(genre=fitGenre)
         return render(request, "books/categorypage.html",
                       {'books': books, 'genre': fitGenre[0]})
 
-def books(request):
-	 return render(request, "books/bookpage.html", {})
+def get_book(request, book):
+        fitBook = Book.objects.filter(name =str(book))
+        context = {'book':fitBook}
+        
+	return render(request, "books/bookpage.html", context)
 
 
 

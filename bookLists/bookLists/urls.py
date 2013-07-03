@@ -8,10 +8,10 @@ from books import views
 urlpatterns = patterns('',
     # Examples:
         url(r'^$', views.home, name='home'),
-	url(r'^bookpage$', views.books),
+	url(r'^books/(?p<book>[\w ]+)/$', views.get_book),
 	url(r'^market$' , views.market),
         
-        url(r'^categories/(?P<genre>\w+)/$', views.get_Books),
+        url(r'^categories/(?P<genre>\w+)/$', views.get_genre),
         url(r'^submitlogin$', views.submitlogin),
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
