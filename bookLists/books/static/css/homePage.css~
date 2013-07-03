@@ -2,7 +2,7 @@ body  {
     background-image: url('../images/books3.jpg');
     background-repeat:no-repeat;
 	height: 100%;
-	width: 75%;
+	width: 70%;
 }
 
 .up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;

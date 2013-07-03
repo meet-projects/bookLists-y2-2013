@@ -1,4 +1,4 @@
-{% extends 'books/base.html' %}
+{% extends 'base.html' %}
 {% block title %}
 
  bookLists
@@ -6,8 +6,7 @@
 
 {% block content %}
 
- This is the home page
-
+ cd45cvt6t
 {% endblock %}
 
 

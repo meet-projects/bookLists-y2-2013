@@ -20,7 +20,7 @@ def books(request):
 
 
 def market(request):
-	 return render(request, "books/market.html", {})
+	 return render(request, "market/market.html", {})
 
         
         

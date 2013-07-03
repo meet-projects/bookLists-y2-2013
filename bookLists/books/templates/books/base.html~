@@ -12,6 +12,7 @@ href="{{ STATIC_URL }}css/base.css">
 
 <body link = "green" alink = "green" vlink = "green"> 
 
+<p>BASE BASE BHASE </p>
 
 <hr>
 <div>
