@@ -12,16 +12,18 @@ href="{{ STATIC_URL }}css/bookpage.css">
 
 {% block content %}
 
-<br></br><br></br><br></br><h1><center> {{book.name}}</center></h1>
+<br></br><br></br><br></br>
+
+<center><div id = "info">
+<h1><center> {{book.name}}</center></h1>
 <h2><center> {{book.author}}  </center></h2>
 <h4><center> {{book.year}}</center></h4>
+<h5 > <center>{{book.genre}} book:</center></h5> 
 
 
-<a> <center>{{book.genre}} book:</center></a> <br><br>
+<span id="summary"> <center> {{book.summary}}</center> </span></div></center>
 
-<span id="summary"> <center> {{book.summary}}</center> </span>
-
-<img src="{{ STATIC_URL }}images/omri.jpg
+<br></br><img src="{{ STATIC_URL }}images/omri.jpg
 " class="imgomri">
 {% endblock %}
 

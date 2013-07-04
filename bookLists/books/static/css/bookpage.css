@@ -1,8 +1,26 @@
-h1{font-family:"Arial";font-style:italic; font-size:30px;color:#1a25d1;}
-h2{font-family:"Arial";font-size:25px;color:#441ad1;}
-h4{font-family:"Arial";font-size:25px;color:#841ad1;}
-a{font-family:"Arial";font-size:25px;color:#ba1ad1;}
-span{font-family:"Arial";font-size:25px;color:#d11a9f;}
-.imgomri{ margin-left:33% ;}
+h1{font-family:"Georgia";font-style:italic; font-size:30px;color:#1a25d1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
+h2{font-family:"Georgia";font-style:italic;font-size:25px;color:#441ad1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
+h4{font-family:"Georgia";font-style:italic;font-size:25px;color:#841ad1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
+h5{font-family:"Georgia";font-style:italic;font-size:25px;color:#ba1ad1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
+span{font-family:"Georgia";font-style:italic;font-size:22px;color:#d11a9f; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
+.imgomri{ margin-left:42% ;}
+
+
+
+.imgomri {
+    border: 1.5px solid #4C3C1B;
+    padding: 13px;
+    width: 300px;
+    background-color: #EFEECB;
+    }
+
+#info {
+
+background-color:#EFEECB;
+border: 10px ;
+border: 3px solid black;
+max-width:200px;
+text-align:center;
+}
 
 
