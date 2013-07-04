@@ -45,6 +45,7 @@ padding-left:50px; margin-top: 10px; z-index:1;
 	color: #0099CC; 
 	font-weight: bold
 	width: 100px;
+	background-color: white ;
 }
 
 
