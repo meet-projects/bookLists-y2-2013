@@ -1,7 +1,6 @@
 # Create your views here.
 
 from models import Book, Genre
-
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
@@ -14,9 +13,12 @@ def home(request):
 
 def get_genre(request,genre):
         fitGenre = Genre.objects.filter(name=str(genre))
+        GENRE= fitGenre[0]
+        name = GENRE.name
+        name = name.capitalize()
         books = Book.objects.filter(genre=fitGenre)
         return render(request, "books/categorypage.html",
-                      {'books': books, 'genre': fitGenre[0]})
+                      {'books': books, 'genre': fitGenre[0], 'genre_name': name})
 
 def get_book(request, book):
         fitBook = Book.objects.filter(name =str(book))
@@ -38,10 +40,13 @@ def submitlogin(request):
     user = authenticate(username=Email, password=Password)
     context = {'user': request.user}
     if user is not None:
+            
         print "Cleared for takeoff"
     else:
 
         print "Invalid log in attempt"
+
+
             
 
     

@@ -7,12 +7,14 @@ href="{{ STATIC_URL }}css/base.css">
 
 <title>  {% block title %} {% endblock %}</title>
 
-<img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
+{% block header %}
+
+{% endblock %}
 </head>
 
 <body link = "green" alink = "green" vlink = "green"> 
 
-
+<img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
 <hr>
 <div>
 	<div id="login_container" class="uplink_container">
@@ -44,20 +46,20 @@ href="{{ STATIC_URL }}css/base.css">
 </div>	
 <br>
 <table id = "cateTable">
-	<tr><td><a class = "categories" href = "categories/Latest" name = "latest">Latest </a></td>
-		<td><a class = "categories" href = "categories/MostRead" name = "most read">Most Read </a></td>
+	<tr><td><a class = "categories" href = "categories/latest" name = "latest">Latest </a></td>
+		<td><a class = "categories" href = "categories/mostread" name = "most read">Most Read </a></td>
 	</tr>
-	<tr><td><a class = "categories" href = "categories/Scifi" name = "sci-fi">Sci-Fi </a></td>
+	<tr><td><a class = "categories" href = "categories/scifi" name = "sci-fi">Sci-Fi </a></td>
 		<td><a class = "categories" href = "categories/Kids" name = "kids">Kids </a></td>
 	</tr>
-	<tr><td><a class = "categories" href = "categories/Romance" name = "romance">Romance </a></td>
+	<tr><td><a class = "categories" href = "categories/romance" name = "romance">Romance </a></td>
 		<td><a class = "categories" href = "categories/Horror" name = "horror">Horror </a></td>
 	</tr>
-	<tr><td><a class = "categories" href = "categories/Comics" name = "comics">Comics </a></td>
-		<td><a class = "categories" href = "categories/Biography" name = "biography">Biography </a></td>
+	<tr><td><a class = "categories" href = "categories/comics" name = "comics">Comics </a></td>
+		<td><a class = "categories" href = "categories/biography" name = "biography">Biography </a></td>
 	</tr>
 	<tr><td><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></td>
-		<td><a class = "categories" href = "categories/History" name = "history">History </a></td>
+		<td><a class = "categories" href = "categories/history" name = "history">History </a></td>
 	</tr>
 </table>
 

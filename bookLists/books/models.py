@@ -7,12 +7,15 @@ from django.db import models
 
 
 class Genre(models.Model):
+        
         name = models.CharField(max_length = 20)
+
+        background_image = models.CharField(max_length = 30)
 
         def __unicode__(self):
                 return self.name
 
-        ##bgImage = models.ImageField(
+        
 
         
 class Book(models.Model):
@@ -21,9 +24,8 @@ class Book(models.Model):
         genre = models.ForeignKey("Genre")
         summary = models.CharField(max_length = 1000)
         year = models.CharField(max_length = 4)
+        cover = models.CharField(max_length = 30)
 
         def __unicode__(self):
                 return self.name
-        
-        ## image
 
