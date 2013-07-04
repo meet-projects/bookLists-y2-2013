@@ -27,3 +27,5 @@ class Book(models.Model):
         
         ## image
 
+class Profile(models.Model):
+        pass

@@ -71,5 +71,11 @@ padding-left:50px; margin-top: 10px;
 #test {
 	display: none;
 }
-
+.writepost
+{
+background-color:blue;
+position:absolute;
+top:75%;
+left:20%;
+}
 
