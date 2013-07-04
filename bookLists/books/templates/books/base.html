@@ -1,13 +1,14 @@
 <html>
 <head>
+
 <link rel="stylesheet" type= "text/css"
 href="{{ STATIC_URL }}css/base.css">
 <script src="{{ STATIC_URL }}js/jquery-1.10.1.min.js"></script>
 <script src="{{ STATIC_URL }}js/base.js"></script> 
 
 <title>  {% block title %} {% endblock %}</title>
-
-
+{% block header %}
+{% endblock header %}
 </head>
 
 <body link = "green" alink = "green" vlink = "green"> 
