@@ -34,7 +34,9 @@ padding-left:50px; margin-top: 10px;
 	margin-left: 80px;
 }
 
-#books{color:#33CC00; margin-left: 80px;
+#books{
+color:#33CC00;
+margin-left: 80px;
 
 }
 
@@ -59,7 +61,7 @@ padding-left:50px; margin-top: 10px;
 	display: none;
  	margin-left: 300px;
 	width: 200px;
-	background-color: white ;
+	
 }
 
 #div1{
