@@ -2,20 +2,28 @@
 
 {% block title %}
 
+
 {{book.author}} - {{book.name}}
 {% endblock %}
+{% block header %}
+<link rel="stylesheet" type= "text/css"
+href="{{ STATIC_URL }}css/bookpage.css">
+{% endblock header %}
 
 {% block content %}
 
-<h3> {{book.author}} </h3><br>
-<h1> {{book.name}}</h1><br>
-<h5> {{book.year}}</h5><br>
+<br></br><br></br><br></br><h1><center> {{book.name}}</center></h1>
+<h2><center> {{book.author}}  </center></h2>
+<h4><center> {{book.year}}</center></h4>
 
 
-a {{book.genre}} book: <br><br>
+<a> <center>{{book.genre}} book:</center></a> <br><br>
 
-<p> {{book.summary}} </p>
+<span id="summary"> <center> {{book.summary}}</center> </span>
 
+<img src="{{ STATIC_URL }}images/omri.jpg
+" class="imgomri">
 {% endblock %}
+
 
 

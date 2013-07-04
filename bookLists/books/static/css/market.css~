@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #writepost {
@@ -6,4 +7,12 @@ position:absolute;
 top:20%;
 left:0%;
 z-index:0;
+=======
+.writepost
+{
+background-color:blue;
+position:absolute;
+top:75%;
+left:20%;
+>>>>>>> a62954d7791943fc8024e6dd39eb09b33e1c5dc2
 }
