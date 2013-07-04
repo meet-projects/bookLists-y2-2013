@@ -1,14 +1,32 @@
 {% extends 'books/base.html' %}
 {% block title %}
+Books 4 All - Welcome
+{% endblock %}
 
- bookLists
+
+{% block headers %}
+
+<link rel="stylesheet" type= "text/css"
+href="../static/css/market.css">
+
+
 {% endblock %}
 
 {% block content %}
 
-  <form id= "writepost"  >
-<br></br><br></br><br></br><br></br>
- <textarea form= "writepost" name= "write a post" >write a post...</textarea>
+  <form action="write your comment.... " method="post" id= "writepost" >
+{%csrf_token%}
+
+ <left> <div id="input" > 
+<table border="3" >
+ <tr>
+<th>write a post! </th>
+<tr> 
+<th> </th> <th> <textarea style="resize: none;" rows= "3" cols ="35" name ="noy" placeholder ="write a post" > </textarea>
+</th><br>
+</table> <input class="done" type="submit" value ="post!" />
+</div> </left>
+
 </form>
 
 {% endblock %}
