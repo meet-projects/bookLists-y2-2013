@@ -7,7 +7,7 @@ body  {
 }
 
 .up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;
-padding-left:50px; margin-top: 10px; 
+padding-left:50px; margin-top: 10px;    
 
 }
 
@@ -34,7 +34,9 @@ padding-left:50px; margin-top: 10px;
 	margin-left: 80px;
 }
 
-#books{color:#33CC00; margin-left: 80px;
+#books{
+color:#33CC00;
+margin-left: 80px;
 
 }
 
@@ -45,6 +47,7 @@ padding-left:50px; margin-top: 10px;
 	color: #0099CC; 
 	font-weight: bold
 	width: 100px;
+	
 }
 
 
@@ -58,6 +61,7 @@ padding-left:50px; margin-top: 10px;
 	display: none;
  	margin-left: 300px;
 	width: 200px;
+	
 }
 
 #div1{

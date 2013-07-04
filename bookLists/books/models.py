@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 
@@ -31,5 +32,11 @@ class Book(models.Model):
                 return self.name
 
 class Profile(models.Model):
-        
-        pass
+        user = models.OneToOneField(User)
+        booksLiked = models.ManyToManyField(Book)
+
+class Rating(models.Model):
+        book = models.ForeignKey("Book")
+        profile = models.ForeignKey("Profile")
+        date_added = models.DateTimeField(auto_now_add = True)
+        rating = models.IntegerField()

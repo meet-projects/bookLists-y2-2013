@@ -2,4 +2,10 @@
 
 {% block title %}
 
-{{ 
+{{profile.user.first_name + " " + profile.user.first_name}}
+
+{% endblock %}
+
+{% block content %}
+ {% for book in profile.booksLiked %}
+	<div> {{book.name}} <img

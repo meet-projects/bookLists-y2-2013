@@ -1,12 +1,31 @@
-{% extends 'base.html' %}
+{% extends 'books/base.html' %}
+
 {% block title %}
 
- bookLists
+
+{{book.author}} - {{book.name}}
 {% endblock %}
+{% block header %}
+<link rel="stylesheet" type= "text/css"
+href="{{ STATIC_URL }}css/bookpage.css">
+{% endblock header %}
 
 {% block content %}
 
- cd45cvt6t
+<br></br><br></br><br></br>
+
+<center><div id = "info">
+<h1><center> {{book.name}}</center></h1>
+<h2><center> {{book.author}}  </center></h2>
+<h4><center> {{book.year}}</center></h4>
+<h5 > <center>{{book.genre}} book:</center></h5> 
+
+
+<span id="summary"> <center> {{book.summary}}</center> </span></div></center>
+
+<br></br><img src="{{ STATIC_URL }}images/omri.jpg
+" class="imgomri">
 {% endblock %}
+
 
 
