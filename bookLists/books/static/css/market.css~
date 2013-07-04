@@ -4,5 +4,6 @@
 background-color: pink ;
 position:absolute;
 top:20%;
-left:20%;
+left:0%;
+z-index:0;
 }
