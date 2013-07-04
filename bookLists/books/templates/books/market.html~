@@ -7,7 +7,7 @@ Books 4 All - Welcome
 {% block headers %}
 
 <link rel="stylesheet" type= "text/css"
-href="../static/css/market.css">
+href="{{ STATIC_URL }}css/market.css">
 
 
 {% endblock %}

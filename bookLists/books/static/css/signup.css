@@ -2,8 +2,13 @@
 #signTable {
 	margin-top: 140px;
 	font-size: 20px;
+<<<<<<< HEAD
 	border-color:#CC6633;
 	border: 10px inset rgba(51, 153,0,0.65);
+=======
+	border: 10px inset rgba(51,153,0,0.65);
+	border-color: #CC6633;
+>>>>>>> 79f96a5b318f52e5c96a828777adc5973074a7bd
 }
 
 
