@@ -8,10 +8,7 @@ from books import views
 urlpatterns = patterns('',
     # Examples:
         url(r'^$', views.home, name='home'),
-<<<<<<< HEAD
-=======
         url(r'^home$', views.home),
->>>>>>> 144540118498b1882b70bb45bc940ffb668ed8e3
 	url(r'^books/(?P<book>[\w ]+)/$', views.get_book),
 	url(r'^market$' , views.market),
         

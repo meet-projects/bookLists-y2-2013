@@ -32,7 +32,7 @@ def register(request):
 		elif "" in [email, first_name, last_name, password, password_again]:
 			return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'all fields should be filled' })
 		else:
-			user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
+                        user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
 			user.save()
 			
 	
@@ -44,7 +44,6 @@ def home(request):
 	return render(request, "books/homepage.html", {'user':request.user})
 
 def get_genre(request,genre):
-<<<<<<< HEAD
         fitGenre = Genre.objects.filter(name=str(genre))
         GENRE= fitGenre[0]
         name = GENRE.name
@@ -52,12 +51,8 @@ def get_genre(request,genre):
         books = Book.objects.filter(genre=fitGenre)
         return render(request, "books/categorypage.html",
                       {'books': books, 'genre': fitGenre[0], 'genre_name': name})
-=======
-	fitGenre = Genre.objects.filter(name=str(genre))
-	books = Book.objects.filter(genre=fitGenre)
-	return render(request, "books/categorypage.html",
-			  {'books': books, 'genre': fitGenre[0]})
->>>>>>> 144540118498b1882b70bb45bc940ffb668ed8e3
+
+
 
 def get_book(request, book):
 	print book
@@ -80,7 +75,6 @@ def market(request):
 	   
 def submitlogin(request):
 
-<<<<<<< HEAD
     Email = request.POST['email']
     Password = request.POST['password']
     user = authenticate(username=Email, password=Password)
@@ -98,21 +92,14 @@ def submitlogin(request):
     
     return render(request, 'books/homepage.html', context)
         
-
         
-=======
 	Email = request.POST['email']
 	Password = request.POST['password']
 	user = authenticate(username=Email, password=Password)
 	login(request, user)
 	context = {'user': request.user}
-<<<<<<< HEAD
 	return render(request, 'books/homepage.html', context)        
->>>>>>> 144540118498b1882b70bb45bc940ffb668ed8e3
-=======
-	return render(request, 'books/homepage.html', context)
 
 def get_profile(request):
 
     pass 
->>>>>>> 479e53cd03d50cd3ad7ac6cb621f40b036fca84d
