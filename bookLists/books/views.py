@@ -1,12 +1,7 @@
 # Create your views here.
 
 from models import Book, Genre
-<<<<<<< HEAD
-from django.http import HttpResponse
-=======
-
 from django.http import HttpResponse, HttpResponseRedirect
->>>>>>> 144540118498b1882b70bb45bc940ffb668ed8e3
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django import forms
@@ -111,5 +106,13 @@ def submitlogin(request):
 	user = authenticate(username=Email, password=Password)
 	login(request, user)
 	context = {'user': request.user}
+<<<<<<< HEAD
 	return render(request, 'books/homepage.html', context)        
 >>>>>>> 144540118498b1882b70bb45bc940ffb668ed8e3
+=======
+	return render(request, 'books/homepage.html', context)
+
+def get_profile(request):
+
+    pass 
+>>>>>>> 479e53cd03d50cd3ad7ac6cb621f40b036fca84d
