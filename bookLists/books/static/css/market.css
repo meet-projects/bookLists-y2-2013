@@ -1,9 +1,8 @@
 
 
-.writepost
-{
-background-color:blue;
+#writepost {
+background-color: pink ;
 position:absolute;
-top:75%;
-left:20%;
+top:20%;
+left:0%;
 }
