@@ -7,8 +7,10 @@ href="{{ STATIC_URL }}css/base.css">
 <script src="{{ STATIC_URL }}js/base.js"></script> 
 
 <title>  {% block title %} {% endblock %}</title>
-{% block header %}
-{% endblock header %}
+
+{% block header %} {% endblock %}
+
+
 </head>
 
 <body link = "green" alink = "green" vlink = "green"> 
@@ -19,7 +21,7 @@ href="{{ STATIC_URL }}css/base.css">
 
 <hr>
 {% if user.is_authenticated %}
-<div style = "float:left">
+<div style = "float:right">
 <form action = "/submitlogout" method = "post">
 {% csrf_token %}
 	<input type = "submit" value = "Logout" style = "border-radius: 27px">
@@ -27,7 +29,7 @@ href="{{ STATIC_URL }}css/base.css">
 {% if user.is_authenticated %}
 <div>
 	<span class = "up_links" id ="profile">
-		Profile
+		<a href = "/profile">
 	</span>
 {% else %}
 <div>
@@ -53,6 +55,23 @@ href="{{ STATIC_URL }}css/base.css">
 {% endif %}
 	<span class = "up_links" id ="books">
 		Books
+		<div id = "cateTable">
+			<div id= "div1">
+				<p><a class = "categories" href = "categories/Latest" name = "latest">Latest </a></p>
+				<p><a class = "categories" href = "categories/Scifi" name = "sci-fi">Sci-Fi </a></p>
+				<p><a class = "categories" href = "categories/Romance" name = "romance">Romance </a></p>
+				<p><a class = "categories" href = "categories/Comics" name = "comics">Comics </a></p>
+				<p><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></p>
+			</div>
+			<div id = "div2">
+				<p><a class = "categories" href = "categories/MostRead" name = "most read">Most Read </a></p>
+				<p><a class = "categories" href = "categories/Kids" name = "kids">Kids </a></p>
+				<p><a class = "categories" href = "categories/Horror" name = "horror">Horror </a></p>
+				<p><a class = "categories" href = "categories/Biography" name = "biography">Biography </a></p>
+				<p><a class = "categories" href = "categories/History" name = "history">History </a></p>
+			</div>
+		</div>
+		<!--<span id="test" style="border: 1px solid black;">test</span>-->
 	</span>
 	<span class = "up_links" id ="market">
    		Market
@@ -61,26 +80,8 @@ href="{{ STATIC_URL }}css/base.css">
 		<form><right>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"></right></form>
 	</span>
 </div>
-	
-<br>
-<table id = "cateTable">
-	<tr><td><a class = "categories" href = "categories/Latest" name = "latest">Latest </a></td>
-		<td><a class = "categories" href = "categories/MostRead" name = "most read">Most Read </a></td>
-	</tr>
-	<tr><td><a class = "categories" href = "categories/Scifi" name = "sci-fi">Sci-Fi </a></td>
-		<td><a class = "categories" href = "categories/Kids" name = "kids">Kids </a></td>
-	</tr>
-	<tr><td><a class = "categories" href = "categories/Romance" name = "romance">Romance </a></td>
-		<td><a class = "categories" href = "categories/Horror" name = "horror">Horror </a></td>
-	</tr>
-	<tr><td><a class = "categories" href = "categories/Comics" name = "comics">Comics </a></td>
-		<td><a class = "categories" href = "categories/Biography" name = "biography">Biography </a></td>
-	</tr>
-	<tr><td><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></td>
-		<td><a class = "categories" href = "categories/History" name = "history">History </a></td>
-	</tr>
-</table>
 
+<br><br>
 
 {% block content %}
 

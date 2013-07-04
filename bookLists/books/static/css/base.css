@@ -1,8 +1,9 @@
 body  {
-    background-image: url('../images/books3.jpg');
-    background-repeat:no-repeat;
-	height: 100%;
-	width: 75%;
+	background: url('../images/books3.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;
@@ -48,13 +49,27 @@ padding-left:50px; margin-top: 10px;
 
 
 #cateTable {
-	
-	border: solid #707070 4px; 
-	display: none; 
-	margin-top: -10%";
-	position:absolute;
-	margin-left:300px;
-	
+   	border: 4px solid #707070;
+    height: 200px;
+    padding: 10px;
+	font-size: 16;
+	font-weight: normal;
+	position: absolute;
+	display: none;
+ 	margin-left: 300px;
+	width: 200px;
+}
+
+#div1{
+	float:left;
+}
+
+#div2{
+	float:right;
+}
+
+#test {
+	display: none;
 }
 .writepost
 {

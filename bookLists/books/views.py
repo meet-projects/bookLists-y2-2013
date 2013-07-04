@@ -76,4 +76,8 @@ def submitlogin(request):
 	user = authenticate(username=Email, password=Password)
 	login(request, user)
 	context = {'user': request.user}
-	return render(request, 'books/homepage.html', context)        
+	return render(request, 'books/homepage.html', context)
+
+def get_profile(request):
+
+    pass 

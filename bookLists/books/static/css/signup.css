@@ -1,4 +1,9 @@
 
-body { background: url(http://images2.layoutsparks.com/1/232890/book-rose-red-fall.jpg); }
+#signTable {
+	margin-top: 140px;
+	font-size: 20px;
+	border: 10px inset rgba(51,153,0,0.65);
+	border-color: #CC6633;
+}
 
 
