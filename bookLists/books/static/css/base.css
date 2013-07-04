@@ -54,6 +54,7 @@ padding-left:50px; margin-top: 10px;
     padding: 10px;
 	font-size: 16;
 	font-weight: normal;
+	position: absolute;
 	display: none;
  	margin-left: 300px;
 	width: 200px;
