@@ -13,6 +13,7 @@ class Genre(models.Model):
         background_image = models.CharField(max_length = 30)
 
         def __unicode__(self):
+                
                 return self.name
 
         
@@ -30,4 +31,5 @@ class Book(models.Model):
                 return self.name
 
 class Profile(models.Model):
+        
         pass

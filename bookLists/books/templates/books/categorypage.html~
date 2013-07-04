@@ -14,7 +14,8 @@ href="{{ STATIC_URL }}css/categorypage.css">
 {% endblock %}
 
 {% block content %}
-
+<body background = "{{ STATIC_URL }}images/{{genre.background_image}}" >
+   
   {% if genre %}
     <div id="category" class="Title">
       <h1 id="{{ genre_name }}">{{ genre_name }}</h1>  
@@ -25,14 +26,10 @@ href="{{ STATIC_URL }}css/categorypage.css">
   {% if books %}
     <div id="books">
       {% for book in books %}
-        <div>
-	  <span class="bookcover"><img src="{{ STATIC_URL }}images/{{book.cover}}" width="270" height="370" alt="{{book.cover}}" />
-	</span>
-<style>
-img.top {vertical-align:text-top;}
-img.bottom {vertical-align:text-bottom;}
-</style>
-	<span class="bookName">{{book.name}}</span>
+        <div id="Book">
+	  <div class="bookCover"><img src="{{ STATIC_URL }}images/{{book.cover}}" width="270" height="370" alt="{{book.cover}}" />
+	</div>
+	<div class="bookName">{{ book.name }}</div>
 	  
         </div>
       {% endfor %}
@@ -41,5 +38,5 @@ img.bottom {vertical-align:text-bottom;}
     <p> No books <p>
   {% endif %}
 
-
+</body>
 {% endblock %}
