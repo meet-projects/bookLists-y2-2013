@@ -40,10 +40,10 @@ href="{{ STATIC_URL }}css/base.css">
 	<form action = "/submitlogin" method = "post">
 		{% csrf_token %}
 		<tr><td>Email:</td>   
-			<td><input type = "text" name = "email"></td>
+			<td><input class="login_field" id="email_field" type = "text" name = "email"></td>
 		</tr>
 		<tr><td >Password: </td>    
-			<td><input type = "password" name = "password"></td>
+			<td><input class="login_field" type = "password" name = "password"></td>
 		</tr>
 		<tr><td><input type = "submit" value = "Login" style = "border-radius: 27px"></td>
 	</form>
