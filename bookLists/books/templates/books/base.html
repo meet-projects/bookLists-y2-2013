@@ -24,11 +24,11 @@ href="{{ STATIC_URL }}css/base.css">
 <form action = "/submitlogout" method = "post">
 {% csrf_token %}
 	<input type = "submit" value = "Logout" style = "border-radius: 27px">
-</form> {% endif %}
+</form> {% endif %}</div>
 {% if user.is_authenticated %}
 <div>
 	<span class = "up_links" id ="profile">
-		<a href = "/profile">
+		<a href = "/profile">Profile</a>
 	</span>
 {% else %}
 <div>
@@ -56,18 +56,19 @@ href="{{ STATIC_URL }}css/base.css">
 		Books
 		<div id = "cateTable">
 			<div id= "div1">
-				<p><a class = "categories" href = "categories/Latest" name = "latest">Latest </a></p>
-				<p><a class = "categories" href = "categories/Scifi" name = "sci-fi">Sci-Fi </a></p>
-				<p><a class = "categories" href = "categories/Romance" name = "romance">Romance </a></p>
-				<p><a class = "categories" href = "categories/Comics" name = "comics">Comics </a></p>
-				<p><a class = "categories" href = "categories/fantasy" name = "fantasy">Fantasy </a></p>
+			
+				
+				<p><a class = "categories" href = "/categories/latest" name = "latest">Latest </a></p>
+				{% for genre in genres1 %}
+				<p><a class = "categories" href = "/categories/{{genre.name}}" name = "{{genre.name}}">{{genre.name}} </a></p>
+				{% endfor %}
 			</div>
 			<div id = "div2">
-				<p><a class = "categories" href = "categories/MostRead" name = "most read">Most Read </a></p>
-				<p><a class = "categories" href = "categories/Kids" name = "kids">Kids </a></p>
-				<p><a class = "categories" href = "categories/Horror" name = "horror">Horror </a></p>
-				<p><a class = "categories" href = "categories/Biography" name = "biography">Biography </a></p>
-				<p><a class = "categories" href = "categories/History" name = "history">History </a></p>
+				<p><a class = "categories" href = "/categories/mostRead" name = "most read">Most Read </a></p>
+				{% for genre in genres2 %}
+				<p><a class = "categories" href = "/categories/{{genre.name}}" name = "{{genre.name}}">{{genre.name}} </a></p>
+				{% endfor %}
+
 			</div>
 		</div>
 		<!--<span id="test" style="border: 1px solid black;">test</span>-->
