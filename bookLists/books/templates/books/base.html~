@@ -12,6 +12,7 @@ href="{{ STATIC_URL }}css/base.css">
 
 <body link = "green" alink = "green" vlink = "green"> 
 
+<<<<<<< Updated upstream
 <img src="{{ STATIC_URL }}images/Logo.png" width="438" height="72" alt="Books 4 all" />
 
 {% if user.is_authenticated %}
@@ -20,6 +21,8 @@ TEST {{ user.username }} ME
 NO USER asdbas;ld
 {% endif %}
 
+=======
+>>>>>>> Stashed changes
 
 <hr>
 
@@ -74,7 +77,7 @@ NO USER asdbas;ld
    		Market
 	</span>
 	<span class = "up_links" id ="search">
-		<form>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"></form>
+		<form><right>Search: <input type="search" name = "search"> <input type = "submit" value = "GO"></form>
 	</span>
 </div>
 	
