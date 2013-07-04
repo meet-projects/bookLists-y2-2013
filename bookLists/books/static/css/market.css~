@@ -1,0 +1,7 @@
+.writepost
+{
+background-color:blue;
+position:absolute;
+top:75%;
+left:20%;
+}
