@@ -8,6 +8,12 @@ from django.contrib.auth import authenticate, login, logout
 from django import forms
 from django.contrib.auth.models import User
 
+def my_render(request, page, context):
+        genres = Genre.objects.all()
+        context['genres1'] = genres[:len(genres)/2]
+        context['genres2'] = genres[len(genres)/2:]
+        return render(request, page, context)
+
 class UserRegistrationForm(forms.Form):
 	 first_name = forms.CharField(label=u'first_name')
 	 last_name = forms.CharField(label=u'last_name')
@@ -16,7 +22,7 @@ class UserRegistrationForm(forms.Form):
 	 password_again = forms.CharField(label=u'password_again',widget=forms.PasswordInput)
 	 
 def sign_up(request):
-	return render(request, 'books/signup.html', {'form': UserRegistrationForm()})
+	return my_render(request, 'books/signup.html', {'form': UserRegistrationForm()})
 def register(request):
 	form = UserRegistrationForm(request.POST)
 	if form.is_valid():
@@ -27,11 +33,11 @@ def register(request):
 		password = form.cleaned_data['password']
 		password_again = form.cleaned_data['password_again']
 		if password != password_again:
-			return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'passwords did not match' })
+			return my_render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'passwords did not match' })
 		elif len(User.objects.filter(username = email)):
-			return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'ERROR: email already exists' })
+			return my_render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'ERROR: email already exists' })
 		elif "" in [email, first_name, last_name, password, password_again]:
-			return render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'all fields should be filled' })
+			return my_render(request, 'books/signup.html', {'form': UserRegistrationForm(), 'message': 'all fields should be filled' })
 		else:
 			user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
 			user.save()
@@ -42,12 +48,12 @@ def register(request):
 	return HttpResponseRedirect('/')
 
 def home(request):
-	return render(request, "books/homepage.html", {'user':request.user})
+	return my_render(request, "books/homepage.html", {'user':request.user})
 
 def get_genre(request,genre):
 	fitGenre = Genre.objects.filter(name=str(genre))
 	books = Book.objects.filter(genre=fitGenre)
-	return render(request, "books/categorypage.html",
+	return my_render(request, "books/categorypage.html",
 			  {'books': books, 'genre': fitGenre[0]})
 
 def get_book(request, book):
@@ -56,7 +62,7 @@ def get_book(request, book):
 	print fitBook
 	context = {'book':fitBook}
 	
-	return render(request, "books/bookpage.html", context)
+	return my_render(request, "books/bookpage.html", context)
 
 
 
@@ -65,10 +71,8 @@ def submitlogout(request):
 	return HttpResponseRedirect("home")
 
 def market(request):
-	 return render(request, "books/market.html", {})
+	 return my_render(request, "books/market.html", {})
 
-	
-	   
 def submitlogin(request):
 
 	Email = request.POST['email']
@@ -76,7 +80,7 @@ def submitlogin(request):
 	user = authenticate(username=Email, password=Password)
 	login(request, user)
 	context = {'user': request.user}
-	return render(request, 'books/homepage.html', context)
+	return my_render(request, 'books/homepage.html', context)
 
 def get_profile(request):
 
