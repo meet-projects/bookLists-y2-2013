@@ -7,7 +7,7 @@ body  {
 }
 
 .up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;
-padding-left:50px; margin-top: 10px; z-index:1;   
+padding-left:50px; margin-top: 10px;    
 
 }
 
@@ -45,7 +45,7 @@ padding-left:50px; margin-top: 10px; z-index:1;
 	color: #0099CC; 
 	font-weight: bold
 	width: 100px;
-	background-color: white ;
+	
 }
 
 
