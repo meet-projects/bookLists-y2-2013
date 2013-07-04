@@ -16,6 +16,7 @@ urlpatterns = patterns('',
         url(r'^submitlogin$', views.submitlogin),
         url(r'^submitregister$', views.register),
         url(r'^signup$', views.sign_up),
+        url(r'^submitlogout$', views.submitlogout), 
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
 

@@ -18,8 +18,11 @@ href="{{ STATIC_URL }}css/base.css">
 
 <hr>
 {% if user.is_authenticated %}
-<div float = "left">
-
+<div style = "float:left">
+<form action = "/submitlogout" method = "post">
+{% csrf_token %}
+	<input type = "submit" value = "Logout" style = "border-radius: 27px">
+</form> {% endif %}
 {% if user.is_authenticated %}
 <div>
 	<span class = "up_links" id ="profile">
@@ -40,7 +43,7 @@ href="{{ STATIC_URL }}css/base.css">
 		<tr><td >Password: </td>    
 			<td><input type = "password" name = "password"></td>
 		</tr>
-		<tr><td><form><input type = "submit" value = "Login" style = "border-radius: 27px"></form></td>
+		<tr><td><input type = "submit" value = "Login" style = "border-radius: 27px"></td>
 	</form>
 			<td><a href = "/signup" name = "sign up">Sign Up </a></td>
 		</tr>
