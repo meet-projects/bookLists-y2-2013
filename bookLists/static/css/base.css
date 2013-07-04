@@ -1,0 +1,60 @@
+body  {
+    background-image: url('../images/books3.jpg');
+    background-repeat:no-repeat;
+	height: 100%;
+	width: 75%;
+}
+
+.up_links{border: 1px solid black; border-radius: 15px; font-weight:bold; font-size: 1.42em; padding-right:50px;
+padding-left:50px; margin-top: 10px; 
+
+}
+
+.uplink_container {
+	float: left;
+	width: 200px;
+}
+
+#search{
+	float:right; 
+	color:484848; 
+	margin-right: 10px;
+	margin-top: 0;   
+
+}
+
+#login-over{
+	color:#003366; 
+	margin-left: 20px;
+}
+
+#market{
+	color:#CC3300; 
+	margin-left: 80px;
+}
+
+#books{color:#33CC00; margin-left: 80px;
+
+}
+
+#login {
+	display: none; 
+	border: solid #707070 4px; 
+	margin: 5px; 
+	color: #0099CC; 
+	font-weight: bold
+	width: 100px;
+}
+
+
+#cateTable {
+	
+	border: solid #707070 4px; 
+	display: none; 
+	margin-top: -10%";
+	position:absolute;
+	margin-left:300px;
+	
+}
+
+
