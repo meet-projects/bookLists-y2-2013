@@ -8,9 +8,12 @@ $(document).ready(function() {
 	});
 
 	$('#books').hover(function () {
+		console.log('hovering');
+		$('#test').show();
 		$('#cateTable').show();
 	}, function() { 
-		$('#cateTable').hover(function() { $(this).show(); }, function() { $(this).hide(); });
+		$('#test').hide();
+		//$('#cateTable').hover(function() { $(this).show(); }, function() { $(this).hide(); });
 	});
 
 
