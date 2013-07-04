@@ -1,6 +1,7 @@
 {% extends 'books/base.html' %}
 
 {% block header %}
+
 <meta name="keywords" content="category, genre, books">
 
 <meta name="description" content="category page">
@@ -16,7 +17,7 @@ href="{{ STATIC_URL }}css/categorypage.css">
 
   {% if genre %}
     <div id="category" class="Title">
-      <h1 id="{{genre_name }}">{{ genre_name }}</h1>  
+      <h1 id="{{ genre_name }}">{{ genre_name }}</h1>  
     </div>
   {% else %}
     <p>There aren't any genres </p>
@@ -25,7 +26,14 @@ href="{{ STATIC_URL }}css/categorypage.css">
     <div id="books">
       {% for book in books %}
         <div>
-	  {{book.name}}
+	  <span class="bookcover"><img src="{{ STATIC_URL }}images/{{book.cover}}" width="270" height="370" alt="{{book.cover}}" />
+	</span>
+<style>
+img.top {vertical-align:text-top;}
+img.bottom {vertical-align:text-bottom;}
+</style>
+	<span class="bookName">{{book.name}}</span>
+	  
         </div>
       {% endfor %}
     </div>

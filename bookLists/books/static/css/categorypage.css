@@ -1,6 +1,6 @@
-#Romance{
-
-	color:#FF6699;
+span.bookName{
+	
+	text-align:top;
 
 }
 
@@ -10,3 +10,4 @@ body  {
 	height: 100%;
 	width: 100%;
 }
+
