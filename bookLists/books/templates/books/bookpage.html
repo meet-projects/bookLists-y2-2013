@@ -13,7 +13,10 @@ href="{{ STATIC_URL }}css/bookpage.css">
 {% block content %}
 
 <br></br><br></br><br></br>
+<img src="{{ STATIC_URL }}images/{{book.cover}}
+" class="bookImg">
 
+<br><br>
 <center><div id = "info">
 <h1><center> {{book.name}}</center></h1>
 <h2><center> {{book.author}}  </center></h2>
@@ -23,8 +26,7 @@ href="{{ STATIC_URL }}css/bookpage.css">
 
 <span id="summary"> <center> {{book.summary}}</center> </span></div></center>
 
-<br></br><img src="{{ STATIC_URL }}images/{{book.cover}}
-" class="bookImg">
+
 
 {% if user.is_authenticated %}
 <div id="rateRead">
