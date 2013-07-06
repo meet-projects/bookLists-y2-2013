@@ -32,6 +32,7 @@ class Book(models.Model):
 class Profile(models.Model):
         user = models.OneToOneField(User)
         booksLiked = models.ManyToManyField(Book)
+        #photo = mo
 
 class Rating(models.Model):
         book = models.ForeignKey("Book")

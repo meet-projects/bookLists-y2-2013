@@ -3,11 +3,11 @@ h2{font-family:"Georgia";font-style:italic;font-size:25px;color:#441ad1; text-sh
 h4{font-family:"Georgia";font-style:italic;font-size:25px;color:#841ad1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
 h5{font-family:"Georgia";font-style:italic;font-size:25px;color:#ba1ad1; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
 #summary{font-family:"Georgia";font-style:italic;font-size:22px;color:#d11a9f; text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;}
-.imgomri{ margin-left:42% ;}
+.bookImg{ margin-left:42% ;}
 
 
 
-.imgomri {
+.bookImg {
     border: 1.5px solid #4C3C1B;
     padding: 13px;
     width: 300px;
@@ -19,7 +19,7 @@ h5{font-family:"Georgia";font-style:italic;font-size:25px;color:#ba1ad1; text-sh
 background-color:#EFEECB;
 border: 10px ;
 border: 3px solid black;
-max-width:200px;
+max-width:400px;
 text-align:center;
 }
 

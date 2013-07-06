@@ -20,7 +20,12 @@ class UserRegistrationForm(forms.Form):
 	 email = forms.CharField(label=u'Email')
 	 password = forms.CharField(label=u'password',widget=forms.PasswordInput)
 	 password_again = forms.CharField(label=u'password_again',widget=forms.PasswordInput)
-	 
+
+class UploadFileForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    file  = forms.FileField()
+
+    
 def sign_up(request):
 	return my_render(request, 'books/signup.html', {'form': UserRegistrationForm()})
 def register(request):
