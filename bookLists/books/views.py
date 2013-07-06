@@ -60,7 +60,7 @@ def register(request):
 		else:
 			user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
 			user.save()
-			a = Profile(user = user)
+			a = Profile(user = user, name = user.first_name + " " + user.last_name)
 			a.save()
 			user = authenticate(username=email, password =password)
 			login(request, user)

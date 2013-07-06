@@ -1,0 +1,34 @@
+{% extends 'books/base.html' %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+<span>
+{% if byname %}
+<table class = "results" id = "byName">
+<tr> IN BOOK NAMES</tr>
+{% for result in byname %}
+<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+{% endfor %}
+</table>
+{% endif %}
+
+
+{% if byauthor %}
+<table class = "results" id = "byAuthor">
+<tr> IN BOOK AUTHORS</tr>
+{% for result in byauthor %}
+<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+{% endfor %}
+</table>
+{% endif %}
+
+{% if byprofile %}
+<table class = "results" id = "byName">
+<tr> IN USERS</tr>
+{% for profile in byprofile %}
+<tr><td> <a href = "/books/{{profile.name}}">{{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+</table>
+{% endif %}
