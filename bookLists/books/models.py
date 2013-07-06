@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 class Genre(models.Model):
         name = models.CharField(max_length = 20)
 
+        background_image = models.CharField(max_length = 30) 
         def __unicode__(self):
                 return self.name
 
