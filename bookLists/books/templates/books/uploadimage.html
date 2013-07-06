@@ -1,0 +1,31 @@
+{% extends 'books/base.html' %}
+
+{% block headers %} 
+{% endblock %}
+
+{% block title %}
+
+ Upload Photo
+{% endblock %}
+
+
+{% block content %}
+
+<p style="color: red;"> {{ message }} </p>
+
+<form action="upload" method="post">
+
+{% csrf_token %}
+
+<table id="signTable">
+
+ {{form}}
+
+</table>
+
+<input type="submit" value="Upload" />
+
+</form> 
+
+
+{% endblock %}

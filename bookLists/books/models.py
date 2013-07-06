@@ -32,8 +32,9 @@ class Book(models.Model):
 
 class Profile(models.Model):
         user = models.OneToOneField(User)
+##        name = models.CharField(max_length = 40)
         booksLiked = models.ManyToManyField(Book)
-        #photo = mo
+##        photo = models.ImageField(upload_to = "books/static/images")
 
 class Rating(models.Model):
         book = models.ForeignKey("Book")

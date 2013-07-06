@@ -1,6 +1,6 @@
 # Create your views here.
 
-from models import Book, Genre
+from models import Book, Genre, Profile
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -21,11 +21,25 @@ class UserRegistrationForm(forms.Form):
 	 password = forms.CharField(label=u'password',widget=forms.PasswordInput)
 	 password_again = forms.CharField(label=u'password_again',widget=forms.PasswordInput)
 
-class UploadFileForm(forms.Form):
-    title = forms.CharField(max_length=50)
+class UploadImageForm(forms.Form):
+    title = forms.CharField(max_length=50)##, label = u'Title')
     photo  = forms.ImageField()
 
-    
+def uploadPage(request):
+        return my_render(request, 'books/uploadimage.html', {'form': UserImageForm()})
+
+def upload(request):
+        form = UploadImageForm(request.POST)
+        if form.is_valid():
+                photo = form.cleaned_data['photo']
+                prof = Profile.objects.filter(user = request.user)[0]
+                prof.photo = photo
+                prof.save()
+                return HttpResponseRedirect('get_profile')
+        else:
+                return HttpResponseRedirect('uploadPage')
+                
+                
 def sign_up(request):
 	return my_render(request, 'books/signup.html', {'form': UserRegistrationForm()})
 def register(request):
@@ -46,13 +60,13 @@ def register(request):
 		else:
 			user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
 			user.save()
+			a = Profile(user = user)
+			a.save()
 			user = authenticate(username=email, password =password)
 			login(request, user)
-			
+			context = {'user': request.user}
 	
-
-	
-			return HttpResponseRedirect('/')
+			return my_render(request, 'books/homepage.html', context)
 
 def home(request):
 	return my_render(request, "books/homepage.html", {'user':request.user})
@@ -90,5 +104,5 @@ def submitlogin(request):
 	return my_render(request, 'books/homepage.html', context)
 
 def get_profile(request):
-
-    pass 
+        return my_render(request, "books/profile.html", {'profile':Profile.objects.filter(user = request.user)[0]})
+    
