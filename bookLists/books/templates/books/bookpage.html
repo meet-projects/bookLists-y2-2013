@@ -25,6 +25,31 @@ href="{{ STATIC_URL }}css/bookpage.css">
 
 <br></br><img src="{{ STATIC_URL }}images/{{book.cover}}
 " class="bookImg">
+
+{% if user.is_authenticated %}
+<div id="rateRead">
+<form>
+<input id="readThis" type = "checkbox" name= "read" value="read">alredy read this book
+<input id="AddToReadList" type = "checkbox" name= "readListAdd" value="readListAdd">add to read list
+</form>
+<table class="rate">
+<form>
+<tr><td><input id = "1satr" type = "radio" name= "star" value="1star">one star</td></tr> 
+<tr><td><input id = "2satr" type = "radio" name= "star" value="2star">two star</td></tr> 
+<tr><td><input id = "3satr" type = "radio" name= "star" value="3star">three star</td></tr> 
+<tr><td><input id = "4satr" type = "radio" name= "star" value="4star">four star</td></tr> 
+<tr><td><input id = "5satr" type = "radio" name= "star" value="5star">five star</td></tr> 
+<tr><td><input id = "6satr" type = "radio" name= "star" value="6star">six star</td></tr> 
+<tr><td><input id = "7satr" type = "radio" name= "star" value="7star">seven star</td></tr> 
+<tr><td><input id = "8satr" type = "radio" name= "star" value="8star">eight star</td></tr> 
+<tr><td><input id = "9satr" type = "radio" name= "star" value="9star">nine star</td></tr>
+<tr><td><input id = "10satr" type = "radio" name= "star" value="10star">ten star</td></tr> 
+</table>
+</form>
+</div>
+
+{% endif %}
+
 {% endblock %}
 
 
