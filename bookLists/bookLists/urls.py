@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # Examples:
         url(r'^$', views.home, name='home'),
         url(r'^home$', views.home),
-	url(r'^books/(?P<book>[\w ]+)/$', views.get_book),
+	url(r'^books/(?P<book>[\w \']+)/$', views.get_book),
 	url(r'^market$' , views.market),
         
         url(r'^categories/(?P<genre>\w+)/$', views.get_genre),
