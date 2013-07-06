@@ -4,11 +4,19 @@ $(document).ready(function() {
 	$('#login-over').hover(function () {
 		$('#login').show();
 		}, function() { 
-	    $('#login').hover(function() { $(this).slideDown(); }, function() { $(this).hide(); }); 
+	    $('#login').hover(function() { $(this).show(); }, function() { $(this).hide(); }); 
 		//$('#email_field').focus();
 	});
 
- 	/**$('.login_field').blur(function() { $('#login').hide(); }); **/
+	$('#login').focus(function() {
+		$('#login').unbind('hover');
+		$('#login').hover(function() { $(this).show(); }, function() {});
+	}, function() {});
+
+ 	$('.login_field').focus(function() { 
+		$('#login').unbind('hover');
+		$('#login').hover(function() {  $(this).show(); }, function() {});
+	}); 
 
 	$('#books').hover(function () {
 		$('#cateTable').toggle();

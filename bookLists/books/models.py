@@ -22,6 +22,7 @@ class Book(models.Model):
         genre = models.ForeignKey("Genre")
         summary = models.CharField(max_length = 1000)
         year = models.CharField(max_length = 4)
+        cover = models.CharField(max_length = 30)
 
         def __unicode__(self):
                 return self.name
