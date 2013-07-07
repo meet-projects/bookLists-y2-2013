@@ -3,14 +3,17 @@
 {% block title %}
 Search Results
 {% endblock %}
-
+{% block headers %}
+<link rel="stylesheet" type= "text/css"
+href="{{ STATIC_URL }}css/search.css">
+{% endblock %}
 {% block content %}
 <span>
 {% if byname %}
 <table class = "results" id = "byName">
-<tr> IN BOOK NAMES</tr>
-{% for result in byname %}
-<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}</a><br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "50" height = "100"></td>></tr>
+<h1> IN BOOK NAMES </h1>
+{% for result in byname %}>>>
+<tr><td> <a href = "/books/{{result.name}}"> <h4>{{result.author}} - {{result.name}}</h4> </a><br></br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "200" height = "200"></td></tr>
 {% endfor %}
 </table>
 {% endif %}
@@ -18,18 +21,18 @@ Search Results
 
 {% if byauthor %}
 <table class = "results" id = "byAuthor">
-<tr> IN BOOK AUTHORS</tr>
-{% for result in byauthor %}
-<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}</a><br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "50" height = "100"></td>></tr>
+<h2> IN BOOK AUTHORS</h2>
+{% for result in byauthor %}>>>
+<tr><td> <a href = "/books/{{result.name}}"><h5>{{result.author}} - {{result.name}}</h5></a><br></br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "200" height = "200"></td>></tr>
 {% endfor %}
 </table>
 {% endif %}
 
 {% if byprofile %}
 <table class = "results" id = "byName">
-<tr> IN USERS</tr>
-{% for profile in byprofile %}
-<tr><td> <a href = "/profiles/{{profile.email}}">{{profile.name}}</a><br><img src = "{{ STATIC_URL }}images/{{profile.photo}}" width = "50" height = "100"></td></tr>
+<h3> IN USERS</h3>
+{% for profile in byprofile %}>>>
+<tr><td> <a href = "/profiles/{{profile.email}}"><h6>{{profile.name}}</h6></a><br></br><!-<img src = "{{ STATIC_URL }}images/{{profile.photo}}" width = "200" height = "200"></td></tr>
 </table>
 {% endfor %}
 {% endif %}
