@@ -11,7 +11,7 @@ urlpatterns = patterns('',
         url(r'^home$', views.home),
 	url(r'^books/(?P<book>[\w \']+)/$', views.get_book),
 	url(r'^market$' , views.market),
-        
+        url(r'^books/(?P<bookName>[\w \']+)/submitrating$', views.submitRating),
         url(r'^categories/(?P<genre>\w+)/$', views.get_genre),
         url(r'^submitlogin$', views.submitlogin),
         url(r'^submitregister$', views.register),

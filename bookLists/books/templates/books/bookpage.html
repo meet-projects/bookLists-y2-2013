@@ -31,9 +31,9 @@ href="{{ STATIC_URL }}css/bookpage.css">
 
 
 {% if user.is_authenticated %}
-{%if not rated%}
+{%if not rated %}
 <div id="rateRead">
-<form action="/{{book.name}}/submitrating" method="post">
+<form action="/books/{{book.name}}/submitrating" method="post">
 
 {% csrf_token %}
 
