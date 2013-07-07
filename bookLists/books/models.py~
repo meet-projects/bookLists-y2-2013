@@ -31,7 +31,7 @@ class Book(models.Model):
         ## image
 
 class Profile(models.Model):
-	#def get_code:
+	def get_code:
         user = models.OneToOneField(User)
 	
         name = models.CharField(max_length = 40)
