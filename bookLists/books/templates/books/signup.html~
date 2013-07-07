@@ -1,37 +1,31 @@
-<html>
-"{{ STATIC_URL }} css/signup.css" 
-<p>Sign Up</p>
+{% extends 'books/base.html' %}
 
-<table>
+{% block headers %} <link rel="stylesheet" type="text/css" href= "{{ STATIC_URL }}css/signup.css">
+{% endblock %}
 
+{% block title %}
 
- <tr>
-   <td> Fisrt Name </td>  <td>   <input type="text" name ="fistname"></td>
-
- </tr>
- <tr>
-    <td>Last  Name  </td>  <td>    <input type="text" name ="lastname"></td>
- </tr>
- <tr>
-   <td> email       </td>  <td>    <input type="text" name ="email"></td>
-
- </tr>
- <tr>
-    <td>password     </td>  <td>   <input type="password" name ="password"></td>
-
- </tr>
- <tr>
-    <td>Repaet password </td>  <td><input type="password" name ="password"></td>
+ Register
+{% endblock %}
 
 
- </tr>
+{% block content %}
+
+<p style="color: red;"> {{ message }} </p>
+
+<form action="submitregister" method="post">
+
+{% csrf_token %}
+
+<table id="signTable">
+
+ {{form.as_table}}
+
 </table>
 
-	
+<input type="submit" value="Register" />
+
+</form> 
 
 
-
-
-
-</html>
-
+{% endblock %}
