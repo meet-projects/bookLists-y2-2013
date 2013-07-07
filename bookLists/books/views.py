@@ -1,6 +1,6 @@
 # Create your views here.
 
-from models import Book, Genre, Profile, Rating
+from models import Book, Genre, Profile
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -39,7 +39,7 @@ def upload(request):
         else:
                 return HttpResponseRedirect('uploadPage')
                 
-Rating                
+                
 def sign_up(request):
 	return my_render(request, 'books/signup.html', {'form': UserRegistrationForm()})
 def register(request):
@@ -82,6 +82,7 @@ def get_book(request, book):
 	fitBook = Book.objects.filter(name =book)[0]
 	print fitBook
 	context = {'book':fitBook}
+	
 	ratings = Rating.objects.filter(book = fitBook)
 	add = 0
 	amount = 0
@@ -125,6 +126,11 @@ def submitlogin(request):
 	return my_render(request, 'books/homepage.html', context)
 
 def get_profile(request):
+<<<<<<< HEAD
+        p = Profile.objects.filter(user = request.user)[0]
+        ratings = Rating.objects.filter(profile = p)
+        return my_render(request, "books/profile.html", {'profile':p, 'ratings':ratings})
+=======
         return my_render(request, "books/profile.html", {'profile':Profile.objects.filter(user = request.user)[0]})
 
 
@@ -140,6 +146,7 @@ def submitRating(request, bookName):
         
         return HttpResponseRedirect('/books/' + bookName)
 
+>>>>>>> 17303e437936f72c8b3bef55f40e8156431e8b8d
 def search(request):
         ask = request.GET['search']
 ##        return HttpResponse(ask)

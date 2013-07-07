@@ -38,17 +38,10 @@ class Profile(models.Model):
 ##        booksLiked = models.ManyToManyField(Book)
 ##        photo = models.ImageField(upload_to = "books/static/images")
 
-        def __unicode__(self):
-                return self.name
-
 class Rating(models.Model):
-        
         book = models.ForeignKey("Book")
         profile = models.ForeignKey("Profile")
         date_added = models.DateTimeField(auto_now_add = True)
         rating = models.IntegerField()
-
-##        def __unicode__(self):
-##                return self.
         
         
