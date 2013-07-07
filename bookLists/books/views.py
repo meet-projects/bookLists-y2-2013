@@ -126,11 +126,11 @@ def submitlogin(request):
 	return my_render(request, 'books/homepage.html', context)
 
 def get_profile(request):
-<<<<<<< HEAD
+
         p = Profile.objects.filter(user = request.user)[0]
         ratings = Rating.objects.filter(profile = p)
         return my_render(request, "books/profile.html", {'profile':p, 'ratings':ratings})
-=======
+
         return my_render(request, "books/profile.html", {'profile':Profile.objects.filter(user = request.user)[0]})
 
 
@@ -146,7 +146,7 @@ def submitRating(request, bookName):
         
         return HttpResponseRedirect('/books/' + bookName)
 
->>>>>>> 17303e437936f72c8b3bef55f40e8156431e8b8d
+
 def search(request):
         ask = request.GET['search']
 ##        return HttpResponse(ask)
