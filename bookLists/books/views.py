@@ -125,10 +125,11 @@ def submitRating(request, bookName):
         return HttpResponseRedirect('/books/' + bookName)
 
 def search(request):
-        ask = request.GET
-        fitBooks = Book.objects.filter(ask in name)
-        fitAuthors = Book.objects.filter(ask in author)
-        fitProfiles = Profile.objects.filter(ask in name)
+        ask = request.GET['search']
+##        return HttpResponse(ask)
+        fitBooks = Book.objects.filter(name__contains=ask)
+        fitAuthors = Book.objects.filter(author__contains=ask)
+        fitProfiles = Profile.objects.filter(name__contains=ask)
         context = {'byname': fitBooks, 'byauthor': fitAuthors, 'byprofile': fitProfiles}
         return my_render(request, "books/search.html", context)
     

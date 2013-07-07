@@ -19,6 +19,7 @@ urlpatterns = patterns('',
         url(r'^submitlogout$', views.submitlogout),
         url(r'^profile$', views.get_profile),
         url(r'^uploadImage$', views.uploadPage),
+        url(r'^search$', views.search),
         url(r'^(?P<bookName>[\w \']+)/submitrating$', views.submitRating),
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
