@@ -60,7 +60,7 @@ def register(request):
 		else:
 			user = User.objects.create_user(username = email, email=None, password=password, last_name=last_name, first_name=first_name)
 			user.save()
-			a = Profile(user = user, name = user.first_name + " " + user.last_name)
+			a = Profile(user = user, name = user.first_name + " " + user.last_name, email = user.username)
 			a.save()
 			user = authenticate(username=email, password =password)
 			login(request, user)
@@ -122,3 +122,11 @@ def submitRating(request, bookName):
         rating.save()
         
         return HttpResponseRedirect('/books/' + bookName)
+def search(request):
+        ask = request.GET
+        fitBooks = Book.objects.filter(ask in name)
+        fitAuthors = Book.objects.filter(ask in author)
+        fitProfiles = Profile.objects.filter(ask in name)
+        context = {'byname': fitBooks, 'byauthor': fitAuthors, 'byprofile': fitProfiles}
+        return my_render(request, "books/search.html", context)
+    

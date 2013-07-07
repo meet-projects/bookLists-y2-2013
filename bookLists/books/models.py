@@ -33,8 +33,9 @@ class Book(models.Model):
 class Profile(models.Model):
 	#def get_code:
         user = models.OneToOneField(User)
-	
+	email = models.CharField(max_length = 200)
         name = models.CharField(max_length = 40)
+        ratings = ManyToMany("Rating")
 ##        booksLiked = models.ManyToManyField(Book)
 ##        photo = models.ImageField(upload_to = "books/static/images")
 
