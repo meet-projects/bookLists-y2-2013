@@ -43,5 +43,8 @@ class Rating(models.Model):
         profile = models.ForeignKey("Profile")
         date_added = models.DateTimeField(auto_now_add = True)
         rating = models.IntegerField()
-        
+ 
+class Comment(models.Model):
+	profile = models.ForeignKey('Profile')
+	comment = models.CharField(max_length = 1000)
         

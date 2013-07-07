@@ -1,6 +1,6 @@
 {% extends 'books/base.html' %}
 {% block title %}
-Books 4 All - Welcome
+Forum
 {% endblock %}
 
 
@@ -14,7 +14,9 @@ href="{{ STATIC_URL }}css/market.css">
 
 {% block content %}
 
-  <form action="write your comment.... " method="post" id= "writepost" >
+{% if user.is_authenticated %}
+
+  <form action="addComment" method="post" id= "writepost" >
 {%csrf_token%}
 
  <left> <div id="input" > 
@@ -22,12 +24,25 @@ href="{{ STATIC_URL }}css/market.css">
  <tr>
 <th>write a post! </th>
 <tr> 
-<th> </th> <th> <textarea style="resize: none;" rows= "3" cols ="35" name ="noy" placeholder ="write a post" > </textarea>
+<input type="hidden" value="{{ user }}">
+<th> </th> <th> <textarea name="comment" style="resize: none;" rows= "3" cols ="35" name ="noy" placeholder ="write a post" > </textarea>
 </th><br>
-</table> <input class="done" type="submit" value ="post!" />
+</table> <button type="submit" value="Submit">Post</button>
 </div> </left>
 
 </form>
+{% endif %}
+
+<div id="comments">
+{% for comment in comments %}
+User - {{ comment.profile.name }}<br>
+Comment - {{ comment.comment }}<br>
+<br><br>
+{% endfor %}
+</div>
+
+
+
 
 {% endblock %}
 

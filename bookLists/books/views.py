@@ -1,6 +1,6 @@
 # Create your views here.
 
-from models import Book, Genre, Profile, Rating
+from models import Book, Genre, Profile, Rating,Comment
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -8,6 +8,11 @@ from django.contrib.auth import authenticate, login, logout
 from django import forms
 from django.contrib.auth.models import User
 
+
+def addComment(request):
+	Comment(profile = Profile.objects.filter(user = request.user)[0], comment = request.POST['comment']).save()
+	return HttpResponseRedirect("/market")
+	
 def my_render(request, page, context):
 	genres = Genre.objects.all()
 	context['genres1'] = genres[:len(genres)/2]
@@ -114,7 +119,7 @@ def submitlogout(request):
 	return HttpResponseRedirect("home")
 
 def market(request):
-	 return my_render(request, "books/market.html", {})
+	 return my_render(request, "books/market.html", {'comments': Comment.objects.all()})
 
 def submitlogin(request):
 
