@@ -2,13 +2,18 @@
 
 {% block title %}
 
+{% block headers %}
+<link rel="stylesheet" type= "text/css"
+href="{{ STATIC_URL }}css/profile.css">
+{% endblock headers %}
+
 {{profile.user.first_name}} {{profile.user.last_name}}
 
 {% endblock %}
 
 {% block content %}
 
-<h1> {{profile.user.first_name}} {{profile.user.last_name}} </h1>
+<h1 id="name"> {{profile.user.first_name}} {{profile.user.last_name}} </h1>
 
 {% if profile.photo %}
 	<img src = "{{profile.photo}}">
