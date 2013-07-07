@@ -85,7 +85,7 @@ def get_book(request, book):
 	ratings = Rating.objects.filter(book = fitBook)
 	add = 0
 	amount = 0
-	if len(ratings) != 0:
+	if len(ratings) == 0:
                 context['avg'] = "no ratings"
         else:
                 for rating in ratings:
