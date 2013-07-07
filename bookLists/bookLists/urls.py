@@ -18,7 +18,8 @@ urlpatterns = patterns('',
         url(r'^signup$', views.sign_up),
         url(r'^submitlogout$', views.submitlogout),
         url(r'^profile$', views.get_profile),
-        url(r'^uploadImage$', views.uploadPage), 
+        url(r'^uploadImage$', views.uploadPage),
+        url(r'^(?P<bookName>[\w \']+)/submitrating$', views.submitRating),
                        
     # url(r'^bookLists/', include('bookLists.foo.urls')),
 
