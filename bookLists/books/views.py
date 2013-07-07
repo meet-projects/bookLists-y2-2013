@@ -82,6 +82,22 @@ def get_book(request, book):
 	fitBook = Book.objects.filter(name =book)[0]
 	print fitBook
 	context = {'book':fitBook}
+	ratings = Rating.objects.filter(book = fitBook)
+	add = 0
+	amount = 0
+	if len(ratings) != 0:
+                context['avg'] = "no ratings"
+        else:
+                for rating in ratings:
+
+                        add+=rating.rating
+
+                        amount+=1
+                
+
+                avg = float(add)/amount
+                context['avg']=avg
+                
 	user = request.user
 	if user.is_authenticated():
                 a = Rating.objects.filter(book = fitBook)

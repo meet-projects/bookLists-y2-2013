@@ -45,7 +45,7 @@ class Rating(models.Model):
         
         book = models.ForeignKey("Book")
         profile = models.ForeignKey("Profile")
-        ##date_added = models.DateTimeField(auto_now_add = True)
+        date_added = models.DateTimeField(auto_now_add = True)
         rating = models.IntegerField()
 
 ##        def __unicode__(self):
