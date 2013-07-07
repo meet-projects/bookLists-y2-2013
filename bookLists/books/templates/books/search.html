@@ -10,7 +10,7 @@ Search Results
 <table class = "results" id = "byName">
 <tr> IN BOOK NAMES</tr>
 {% for result in byname %}
-<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}</a><br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "50" height = "100"></td>></tr>
 {% endfor %}
 </table>
 {% endif %}
@@ -20,7 +20,7 @@ Search Results
 <table class = "results" id = "byAuthor">
 <tr> IN BOOK AUTHORS</tr>
 {% for result in byauthor %}
-<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+<tr><td> <a href = "/books/{{result.name}}">{{result.author}} - {{result.name}}</a><br><img src = "{{ STATIC_URL }}images/{{result.cover}}" width = "50" height = "100"></td>></tr>
 {% endfor %}
 </table>
 {% endif %}
@@ -29,7 +29,7 @@ Search Results
 <table class = "results" id = "byName">
 <tr> IN USERS</tr>
 {% for profile in byprofile %}
-<tr><td> <a href = "/profiles/{{profile.email}}">{{profile.name}}<br><img src = {{ STATIC_URL }}images/{{profile.photo}}</a></td>></tr>
+<tr><td> <a href = "/profiles/{{profile.email}}">{{profile.name}}</a><br><img src = "{{ STATIC_URL }}images/{{profile.photo}}" width = "50" height = "100"></td></tr>
 </table>
 {% endfor %}
 {% endif %}
