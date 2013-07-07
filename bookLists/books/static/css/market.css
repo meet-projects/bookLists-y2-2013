@@ -3,13 +3,16 @@
 #writepost {
 background-color: pink ;
 position:absolute;
-top:20%;
+top:30%%;
 left:0%;
 z-index:-1;
 }
 
 
 div#comments{
-margin-top:10%; 
-
+margin-top:2%; 
+font-size:25px;
+background-color: #009966;
+width:25%;
+text-align:center;
 }

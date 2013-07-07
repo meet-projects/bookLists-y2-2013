@@ -31,15 +31,17 @@ href="{{ STATIC_URL }}css/market.css">
 </div> </left>
 
 </form>
+<br><br><br><br><br><br><br><br><br>
 {% endif %}
 
-<div id="comments">
+
 {% for comment in comments %}
-User - {{ comment.profile.name }}<br>
-Comment - {{ comment.comment }}<br>
-<br><br>
+<div id="comments">
+{{ comment.profile.name }}
+<p>" {{ comment.comment }} "</p><br>
+<br><br></div>
 {% endfor %}
-</div>
+
 
 
 
