@@ -12,7 +12,7 @@ h5{font-family:"Georgia";font-style:italic;font-size:25px;color:#ba1ad1; /*text-
 	padding: 13px;
 	width: 300px;
 	background-color: #EFEECB;
-	margin-left:40%
+	margin-left:35%
 }
 
 #info {
@@ -20,7 +20,7 @@ h5{font-family:"Georgia";font-style:italic;font-size:25px;color:#ba1ad1; /*text-
 	border: 10px inset rgba(51,153,0,0.65);
 	max-width:400px;
 	text-align:center;
-	margin-left:14.5%
+	margin-left:-2%
 }
 
 #rateRead{
