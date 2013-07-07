@@ -1,6 +1,6 @@
 # Create your views here.
 
-from models import Book, Genre, Profile, Rating,Comment
+from models import Book, Genre, Profile, Rating, Comment
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render

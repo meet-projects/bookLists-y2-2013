@@ -34,13 +34,14 @@ href="{{ STATIC_URL }}css/market.css">
 <br><br><br><br><br><br><br><br><br>
 {% endif %}
 
-
+{% if comments %}
 {% for comment in comments %}
 <div id="comments">
 {{ comment.profile.name }}
 <p>" {{ comment.comment }} "</p><br>
 <br><br></div>
 {% endfor %}
+{% endif %}
 
 
 
