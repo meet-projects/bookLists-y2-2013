@@ -29,6 +29,6 @@ Search Results
 <table class = "results" id = "byName">
 <tr> IN USERS</tr>
 {% for profile in byprofile %}
-<tr><td> <a href = "/books/{{profile.name}}">{{result.name}}<br><img src = {{ STATIC_URL }}images/{{book.cover}}</a></td>></tr>
+<tr><td> <a href = "/profiles/{{profile.email}}">{{profile.name}}<br><img src = {{ STATIC_URL }}images/{{profile.photo}}</a></td>></tr>
 </table>
 {% endif %}
