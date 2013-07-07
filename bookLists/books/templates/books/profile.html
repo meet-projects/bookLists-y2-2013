@@ -28,6 +28,7 @@ href="{{ STATIC_URL }}css/profile.css">
 	<div class="rates"> <h4>{{rating.book.name}}<br></h4> <img src = "{{ STATIC_URL }}images/{{ rating.book.cover }}"><br>
 	<h5> at {{rating.date_added}}<br></h5>
 	<h3>Rating: {{rating.rating}}</h3>
+	<hr>
 			
  </div>
 	{% endfor %}

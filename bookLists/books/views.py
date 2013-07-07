@@ -131,7 +131,12 @@ def get_profile(request):
         ratings = Rating.objects.filter(profile = p)
         return my_render(request, "books/profile.html", {'profile':p, 'ratings':ratings})
 
-        return my_render(request, "books/profile.html", {'profile':Profile.objects.filter(user = request.user)[0]})
+def get_others_profile(request, email):
+
+        p = Profile.objects.filter(email = email)[0]
+        ratings = Rating.objects.filter(profile = p)
+        return my_render(request, "books/profile.html", {'profile':p, 'ratings':ratings})
+
 
 
 def submitRating(request, bookName):
